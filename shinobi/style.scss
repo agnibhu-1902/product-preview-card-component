@@ -1,0 +1,124 @@
+@import 'variable';
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-family: Montserrat;
+}
+
+.container {
+    width: 95%;
+    margin: 2.5em auto;
+    height: 90%;
+    // background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: $radius;
+    display: flex;
+    flex-direction: column;
+
+    .card-img {
+        #mobile {
+            width: 100%;
+            border-radius: $radius $radius 0 0;
+        }
+        #desktop {
+            display: none;
+        }
+    }
+    .card-body {
+        padding: 2em;
+        padding-top: 0;
+    }
+    .card-info {
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        font-size: large;
+        color: map-get($map: $colors, $key: "grey-dark")
+    }
+    .card-title {
+        font-size: 2.5rem;
+        font-family: Fraunces;
+        color: map-get($map: $colors, $key: "blue-dark");
+    }
+    .card-subtitle {
+        font-size: 1rem;
+        color: map-get($map: $colors, $key: "grey-dark");
+        line-height: 1.7em;
+    }
+    .card-price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+    .card-price-new {
+        color: map-get($map: $colors, $key: "green");
+        font-size: 2.8rem;
+        font-family: Fraunces;
+        font-weight: bold;
+    }
+    .card-price-old {
+        font-size: 1.5rem;
+        margin-left: 1em;
+        color: map-get($map: $colors, $key: "grey-dark");
+        text-decoration-line: line-through;
+    }
+    .card-btn {
+        display: flex;
+        button {
+            width: 95%;
+            margin: 0 auto;
+            padding: 1.5em 0;
+            background-color: map-get($map: $colors, $key: "green");
+            border: none;
+            border-radius: $radius;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 2.5em;
+                margin-right: 1.5em;
+            }
+            span {
+                font-size: 2em;
+                color: white;
+                font-family: Montserrat;
+                font-weight: 700;
+            }
+        }
+        button:hover, button:focus {
+            background-color: map-get($map: $colors, $key: "green-dark");
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        height: 100vh;
+    }
+    .card {
+        flex-direction: row;
+        width: 800px;
+        height: 600px;
+        .card-img {
+            #mobile {
+                display: none;
+            }
+            #desktop {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: $radius 0 0 $radius;
+            }
+        }
+        .card-body {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}

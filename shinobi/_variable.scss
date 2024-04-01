@@ -1,0 +1,9 @@
+// Color palette
+$colors: (
+    "green": hsl(158, 36%, 37%),
+    "green-dark": mix(black, hsl(158, 36%, 37%), 60%),
+    "grey-dark": hsl(228, 12%, 48%),
+    "blue-dark": hsl(212, 21%, 14%)
+);
+
+$radius: 10px;
