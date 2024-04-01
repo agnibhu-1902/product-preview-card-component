@@ -11,7 +11,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Click here](https://agnibhu-1902.github.io/product-preview-card-component/)
 
 ### Built with
 
