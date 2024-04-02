@@ -27,23 +27,23 @@ body {
 }
 .card .card-body {
   padding: 2em;
-  padding-top: 0;
 }
 .card .card-info {
   text-transform: uppercase;
   letter-spacing: 0.5em;
-  font-size: large;
+  font-size: 0.75em;
   color: hsl(228, 12%, 48%);
 }
 .card .card-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: Fraunces;
   color: hsl(212, 21%, 14%);
 }
 .card .card-subtitle {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: hsl(228, 12%, 48%);
   line-height: 1.7em;
+  margin-bottom: 2em;
 }
 .card .card-price {
   display: flex;
@@ -52,12 +52,12 @@ body {
 }
 .card .card-price-new {
   color: hsl(158, 36%, 37%);
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-family: Fraunces;
   font-weight: bold;
 }
 .card .card-price-old {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-left: 1em;
   color: hsl(228, 12%, 48%);
   text-decoration-line: line-through;
@@ -66,7 +66,7 @@ body {
   display: flex;
 }
 .card .card-btn button {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   padding: 1.5em 0;
   background-color: hsl(158, 36%, 37%);
@@ -76,11 +76,11 @@ body {
   justify-content: center;
 }
 .card .card-btn button img {
-  width: 2.5em;
+  width: 1.5em;
   margin-right: 1.5em;
 }
 .card .card-btn button span {
-  font-size: 2em;
+  font-size: 0.85rem;
   color: white;
   font-family: Montserrat;
   font-weight: 700;
@@ -90,13 +90,17 @@ body {
 }
 
 @media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
   .container {
     height: 100vh;
   }
   .card {
+    transform: translateY(-5%);
     flex-direction: row;
-    width: 800px;
-    height: 600px;
+    width: 600px;
+    height: 500px;
   }
   .card .card-img #mobile {
     display: none;
@@ -108,9 +112,9 @@ body {
     border-radius: 10px 0 0 10px;
   }
   .card .card-body {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 80%;
+  }
+  .card .card-body .card-btn {
+    margin-top: 2em;
   }
 }
