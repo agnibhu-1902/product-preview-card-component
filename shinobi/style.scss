@@ -103,8 +103,8 @@ body {
     .card {
         transform: translateY(-5%);
         flex-direction: row;
-        width: 600px;
-        height: 500px;
+        max-width: 600px;
+        max-height: 500px;
         .card-img {
             #mobile {
                 display: none;
@@ -122,5 +122,12 @@ body {
                 margin-top: $pad-std;
             }
         }
+    }
+}
+
+@media (max-height: 600px) {
+    .container {
+        height: auto;
+        margin: $pad-std * 2 0;
     }
 }

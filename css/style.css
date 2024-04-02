@@ -97,8 +97,8 @@ body {
   .card {
     transform: translateY(-5%);
     flex-direction: row;
-    width: 600px;
-    height: 500px;
+    max-width: 600px;
+    max-height: 500px;
   }
   .card .card-img #mobile {
     display: none;
@@ -114,5 +114,11 @@ body {
   }
   .card .card-body .card-btn {
     margin-top: 2em;
+  }
+}
+@media (max-height: 600px) {
+  .container {
+    height: auto;
+    margin: 4em 0;
   }
 }
